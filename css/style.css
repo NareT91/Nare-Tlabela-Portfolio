@@ -1,0 +1,285 @@
+
+body {
+    background-color: lightblue !important;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #172033;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #172033;
+    text-decoration: none;
+}
+
+.logo span,
+.hero h1 span {
+    color: #f15a24;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #172033;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #f15a24;
+}
+
+.hire-btn,
+.primary-btn {
+    background: #f15a24;
+    color: white;
+    padding: 13px 24px;
+    border-radius: 5px;
+}
+
+nav .hire-btn:hover {
+    background: #d94816;
+    color: white;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 10%;
+    gap: 50px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.intro {
+    color: #f15a24;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 72px);
+    margin-bottom: 12px;
+}
+
+.hero h2 {
+    font-size: 27px;
+    color: #687386;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #687386;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.secondary-btn {
+    border: 1px solid #f15a24;
+    color: #f15a24;
+    padding: 13px 24px;
+    border-radius: 5px;
+}
+
+.social-links {
+    display: flex;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.social-links a {
+    color: #172033;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.hero-image {
+    width: 340px;
+    height: 400px;
+    flex: 0 0 340px;
+    background: #f15a24;
+    border-radius: 48% 48% 12px 12px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+
+.image-placeholder {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: #f15a24;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 65px;
+    font-weight: bold;
+}
+
+@media (max-width: 850px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 45px 6%;
+    }
+
+    .hero-buttons,
+    .social-links {
+        justify-content: center;
+    }
+
+  
+    
+}
+
+/* Animated professional title */
+
+.animated-title {
+    min-height: 38px;
+    color: #687386;
+}
+
+.cursor {
+    color: #f15a24;
+    font-weight: bold;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Button interactions */
+
+.primary-btn,
+.secondary-btn {
+    transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+    background: #172033;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.secondary-btn:hover {
+    background: #f15a24;
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* Social link interactions */
+
+.social-links a {
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #f15a24;
+    transform: translateY(-4px);
+}
+
+
+/* Floating decorative dots */
+
+.floating-dot {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #ff6b35;
+    border-radius: 50%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.dot-one {
+    top: 30px;
+    right: 15px;
+    animation: floatingDot 3s ease-in-out infinite;
+}
+
+.dot-two {
+    bottom: 60px;
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    animation: floatingDot 4s ease-in-out infinite reverse;
+}
+
+@keyframes floatingDot {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
