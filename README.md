@@ -1,1 +1,1 @@
-# Nare-Tlabela-Potfolio
+# Nare-Tlabela-Portfolio
