@@ -1,5 +1,4 @@
 
-// Animated professional titles
 const roles = [
     "Software Developer",
     "Front-End Developer",
@@ -13,11 +12,13 @@ let characterIndex = 0;
 let deleting = false;
 
 function typeEffect() {
+
     if (!typingText) return;
 
     const currentRole = roles[roleIndex];
 
     if (!deleting) {
+
         typingText.textContent =
             currentRole.substring(0, characterIndex + 1);
 
@@ -28,7 +29,9 @@ function typeEffect() {
             setTimeout(typeEffect, 1800);
             return;
         }
+
     } else {
+
         typingText.textContent =
             currentRole.substring(0, characterIndex - 1);
 
